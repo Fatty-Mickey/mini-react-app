@@ -7,9 +7,9 @@ import Component4 from './components/Component4';
 function App() {
   return (
     <>
-      <CountFunctionComponent />
+      {/* <CountFunctionComponent /> */}
       <hr />
-      <CountClassComponent />
+      {/* <CountClassComponent /> */}
       <hr />
       <Component3 />
       <hr />
