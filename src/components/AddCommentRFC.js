@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 
-export default function Component3() {
+export default function AddCommentRFC() {
     const [comments, setComment] = useState([])
 
     let myRef = React.createRef()
-
 
     let addComment = () => {
         let currentComment = myRef.current.value
@@ -12,9 +11,10 @@ export default function Component3() {
         setComment(updateComments)
         myRef.current.value = ''
     }
+    
     return (
         <div>
-            <h1>State</h1>
+            <h1>Add comment</h1>
             <div><textarea ref={myRef}></textarea></div>
             <div>
                 <button onClick={addComment}>Add comment</button>

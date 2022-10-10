@@ -1,22 +1,13 @@
 import React, { Component } from 'react'
 
-export default class Component4 extends Component {
+export default class AddCommentRCC extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            count: 0,
             comments: []
         }
         this.myRef = React.createRef()
-    }
-
-    handler = () => {
-        let currentCount = this.state.count
-        currentCount++
-        this.setState({
-            count: currentCount
-        })
     }
 
     addComment = () => {
@@ -32,11 +23,7 @@ export default class Component4 extends Component {
     render() {
         return (
             <div>
-                <h1>State</h1>
-                <div>
-                    <button onClick={this.handler}>Count +</button>
-                </div>
-                <div>{this.state.count}</div>
+                <h1>Add comment</h1>
                 <div>
                     <textarea ref={this.myRef}></textarea>
                 </div>
