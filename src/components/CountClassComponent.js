@@ -23,7 +23,7 @@ export default class CountClassComponent extends Component {
             count: currentCount
         })
     }
-
+    
     render() {
         return (
             <div>
