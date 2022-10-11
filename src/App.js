@@ -8,10 +8,6 @@ function App() {
       <CountFunctionComponent />
       <hr />
       <CountClassComponent />
-      <hr />
-      {/* <Component3 /> */}
-      <hr />
-      {/* <Component4 /> */}
     </>
   );
 }
