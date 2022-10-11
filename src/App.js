@@ -1,13 +1,30 @@
+import React from 'react';
 import './App.css';
-import CountFunctionComponent from './components/CountFunctionComponent';
-import CountClassComponent from './components/CountClassComponent';
+import Success from './components/Success';
+import Users from './components/Users/Users';
+
+
+
+// Тут список пользователей: https://reqres.in/api/users
 
 function App() {
+  const [users, setUsers] = React.useState([])
+
+  React.useEffect(() => {
+    fetch('https://reqres.in/api/users').then(res => res.json()).then(json => {
+      setUsers(json.data)
+    }).catch(err => {
+      console.warn(err)
+      alert('Error download users')
+    })
+  },[])
+
   return (
     <>
-      <CountFunctionComponent />
-      <hr />
-      <CountClassComponent />
+      <div className="App">
+        <Users items={users} />
+        {/* <Success /> */}
+      </div>
     </>
   );
 }
